@@ -1,0 +1,21 @@
+.navbar__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navbar__logoBox__image {
+  width: 10%;
+}
+
+.navbar__logoBox {
+  flex: 1;
+}
+
+.navbar__buttonsBox {
+  flex: 1;
+}
+
+.navbar__searchBox {
+  flex: 1;
+}
