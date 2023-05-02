@@ -17,8 +17,12 @@ const marvelTheme = createTheme({
       // dark: '',
       // light: '',
     },
-    // black: '#000',
-    // white: '#fff',
+    white: {
+      main: '#fff',
+    },
+    black: {
+      main: '#000',
+    },
   },
 });
 

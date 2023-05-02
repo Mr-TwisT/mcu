@@ -1,10 +1,13 @@
-// import './App.css';
+import { ThemeProvider } from '@emotion/react';
 
+import marvelTheme from './styles/theme';
 import LandingPage from './pages/LandingPage';
 
 const App = () => (
   <>
-    <LandingPage />
+    <ThemeProvider theme={marvelTheme}>
+      <LandingPage />
+    </ThemeProvider>
   </>
 );
 

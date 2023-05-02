@@ -2,39 +2,77 @@ import {
   AppBar,
   Avatar,
   Box,
-  Button,
   Container,
+  Button,
+  // Divider,
   InputBase,
+  Link,
 } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 
-import '../styles/navbar.css';
-import marvelTheme from '../styles/theme';
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/logo2.png';
+import NavButton from '../components/NavButton';
 
 const Navbar = () => {
-  const theme = useTheme(marvelTheme);
-
   return (
-    <AppBar className="navbar" position="static">
-      <Container maxWidth="xl" className="navbar__container">
-        <Box className="navbar__logoBox">
-          <img
-            className="navbar__logoBox__image"
-            src={logo}
-            alt="Marvel_logo"
-          />
+    <AppBar position="static">
+      <Container
+        maxWidth="xl"
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+        }}
+      >
+        <Box
+          sx={{
+            width: '20%',
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '5px',
+            paddingLeft: '1rem',
+            paddingRight: '1rem',
+          }}
+        >
+          <Link
+            href="#"
+            align="center"
+            sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <img style={{ width: '50%' }} src={logo} alt="Marvel_logo" />
+          </Link>
         </Box>
         <Box
-          className="navbar__buttonsBox"
-          bgcolor={theme.palette.primary.main}
+          sx={{
+            flex: 2,
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            padding: '0 10px',
+          }}
         >
-          <Button variant="text">Home</Button>
-          <Button variant="text">Movies</Button>
-          <Button variant="text">Series</Button>
-          <Button variant="text">About us</Button>
+          {/* <Divider orientation="vertical" variant="middle" flexItem sx={{
+          }} /> */}
+          <NavButton text="Home" />
+          <NavButton text="Movies" />
+          <NavButton text="Series" />
+          <NavButton text="About us" />
         </Box>
-        <Box className="navbar__searchBox">
+        <Box
+          sx={{
+            flex: 3,
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'flex-end',
+            gap: '1rem',
+          }}
+        >
           <InputBase placeholder="Search..." />
           <Button>
             <Avatar>P</Avatar>
