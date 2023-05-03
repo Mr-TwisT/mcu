@@ -2,12 +2,13 @@ import {
   AppBar,
   Avatar,
   Box,
-  Container,
+  // Container,
   // Divider,
   InputBase,
   Link,
   IconButton,
   Tooltip,
+  Stack,
 } from '@mui/material';
 
 import logo from '../assets/images/logo2.png';
@@ -22,12 +23,12 @@ const Navbar = () => {
           'linear-gradient(127deg, rgba(105,19,20,1) 5%, rgba(156,29,30,1) 43%, rgba(232,43,44,1) 57%, rgba(194,36,37,1) 95%)',
       }}
     >
-      <Container
-        maxWidth="xl"
+      <Stack
         sx={{
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-between',
+          gap: '2rem',
         }}
       >
         <Box
@@ -53,12 +54,12 @@ const Navbar = () => {
               justifyContent: 'center',
             }}
           >
-            <img style={{ width: '75%' }} src={logo} alt="Marvel_logo" />
+            <img style={{ width: '50%' }} src={logo} alt="Marvel_logo" />
           </Link>
         </Box>
         <Box
           sx={{
-            flex: 2,
+            flex: 1.2,
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
@@ -74,13 +75,14 @@ const Navbar = () => {
         </Box>
         <Box
           sx={{
-            flex: 3,
+            flex: 1.8,
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'flex-end',
-            gap: '4rem',
-            marginLeft: '3rem',
+            gap: '5rem',
+            marginLeft: '10rem',
+            marginRight: '2rem',
             padding: '0 1rem',
           }}
         >
@@ -109,7 +111,7 @@ const Navbar = () => {
             </IconButton>
           </Tooltip>
         </Box>
-      </Container>
+      </Stack>
     </AppBar>
   );
 };
