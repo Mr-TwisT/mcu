@@ -13,7 +13,7 @@ const marvelTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Rubik',
+    fontFamily: 'Lato',
   },
 });
 
