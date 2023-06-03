@@ -17,47 +17,37 @@ const Navbar = () => {
     <AppBar
       position="static"
       sx={{
+        height: '7vh',
         background:
           'linear-gradient(127deg, rgba(105,19,20,1) 5%, rgba(156,29,30,1) 43%, rgba(232,43,44,1) 57%, rgba(194,36,37,1) 95%)',
       }}
     >
       <Stack
         sx={{
+          height: '100%',
           display: 'flex',
           flexDirection: 'row',
+          alignItems: 'center',
           justifyContent: 'space-between',
           gap: '2rem',
         }}
       >
         <Box
           sx={{
-            width: '15%',
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '5px',
-            paddingLeft: '1rem',
-            paddingRight: '1rem',
+            flex: 1.25,
+            // width: '15%',
+            padding: '5px 1rem',
             marginRight: '2rem',
+            bgcolor: 'pink',
           }}
         >
-          <Link
-            href="#"
-            align="center"
-            sx={{
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <img style={{ width: '50%' }} src={logo} alt="Marvel_logo" />
+          <Link href="#" align="center" ml="20%">
+            <img style={{ width: '60%' }} src={logo} alt="Marvel_logo" />
           </Link>
         </Box>
         <Box
           sx={{
-            flex: 2,
+            flex: 3,
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
@@ -72,7 +62,7 @@ const Navbar = () => {
         </Box>
         <Box
           sx={{
-            flex: 2,
+            flex: 3,
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',

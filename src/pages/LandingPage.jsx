@@ -17,22 +17,52 @@ const LandingPage = () => {
           backgroundSize: 'cover',
         }}
       >
-        <Box m={'auto 0'} p={4} sx={{ maxWidth: '50%' }}>
-          <Typography variant="h5" color={'primary.contrastText'} align="left">
-            {`Welcome to the Marvel Cinematic Universe Hub! Enter a world where
+        <Box
+          p={4}
+          sx={{
+            maxWidth: '50%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            flexGrow: 1,
+          }}
+        >
+          <Box
+            sx={{
+              flex: 3,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+            }}
+          >
+            <Typography
+              variant="h5"
+              color={'primary.contrastText'}
+              align="left"
+            >
+              {`Welcome to the Marvel Cinematic Universe Hub! Enter a world where
             superheroes rule and thrilling adventures await. Whether you're a
             devoted fan or new to Marvel movies, this is your go-to destination
             to explore the captivating cinematic marvels that have enthralled
-            audiences worldwide. Discover plot summaries, character stories, and
+            audiences worldwide.`}
+            </Typography>
+            <Typography
+              variant="h5"
+              color={'primary.contrastText'}
+              align="right"
+              mt={3}
+            >
+              {`Discover plot summaries, character stories, and
             hidden surprises in each film. Engage in polls, quizzes, and connect
             with fellow enthusiasts in our vibrant fan forums. Get ready for an
             extraordinary journey through the MCU, where imagination knows no
             limits and heroes become legends. Suit up and let the Marvel magic
             begin!`}
-          </Typography>
+            </Typography>
+          </Box>
           <Box
-            mt={8}
             sx={{
+              flex: 2,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',

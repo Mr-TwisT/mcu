@@ -10,10 +10,13 @@ const NavButton = ({ text, divider = false }) => (
       }}
       sx={{
         fontSize: '1rem',
-        height: '50%',
         margin: 'auto 0',
-        padding: '0 8px',
+        // padding: '0 8px',
         color: 'primary.contrastText',
+
+        ':hover': {
+          bgcolor: 'secondary.main',
+        },
       }}
     >
       {text}
