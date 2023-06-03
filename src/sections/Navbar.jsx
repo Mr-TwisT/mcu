@@ -2,8 +2,6 @@ import {
   AppBar,
   Avatar,
   Box,
-  // Container,
-  // Divider,
   InputBase,
   Link,
   IconButton,
@@ -59,35 +57,34 @@ const Navbar = () => {
         </Box>
         <Box
           sx={{
-            flex: 1.2,
+            flex: 2,
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
             padding: '0 10px',
           }}
         >
-          {/* <Divider orientation="vertical" variant="middle" flexItem sx={{
-          }} /> */}
-          <NavButton text="Home" />
-          <NavButton text="Movies" />
-          <NavButton text="Series" />
+          <NavButton text="Home" divider={true} />
+          <NavButton text="Heroes" divider={true} />
+          <NavButton text="Movies" divider={true} />
+          <NavButton text="Series" divider={true} />
           <NavButton text="About us" />
         </Box>
         <Box
           sx={{
-            flex: 1.8,
+            flex: 2,
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'flex-end',
             gap: '5rem',
-            marginLeft: '10rem',
+            marginLeft: '8rem',
             marginRight: '2rem',
             padding: '0 1rem',
           }}
         >
           <InputBase
-            placeholder="Search..."
+            placeholder="Search something cool..."
             fullWidth
             sx={{
               height: '55%',
