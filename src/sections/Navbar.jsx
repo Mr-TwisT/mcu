@@ -101,6 +101,7 @@ const Navbar = () => {
                 variant="rounded"
                 sx={{
                   padding: 0,
+                  background: 'primary.dark', //????
                 }}
               >
                 P
