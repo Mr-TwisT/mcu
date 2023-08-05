@@ -5,6 +5,7 @@ import {
   InputBase,
   Link,
   IconButton,
+  TextField,
   Tooltip,
   Stack,
 } from '@mui/material';
@@ -60,6 +61,9 @@ const Navbar = () => {
           <NavButton text="About us" />
         </Box>
         <Box
+          component="form"
+          autoComplete="off"
+          noValidate
           sx={{
             flex: 3,
             display: 'flex',
@@ -72,20 +76,16 @@ const Navbar = () => {
             padding: '0 1rem',
           }}
         >
-          <InputBase
-            placeholder="Search something cool..."
+          <TextField
+            id="outlined-basic"
+            label="Search something cool..."
+            variant="outlined"
             fullWidth
             sx={{
-              padding: '5px 10px 5px 20px',
-              backgroundColor: '#fff',
-              color: 'secondary.main',
-              border: '1px solid #555',
+              color: '#000',
               borderRadius: '5px',
               fontSize: '1em',
-
-              // ':hover': {
-              //   bgcolor: 'secondary.main',
-              // },
+              outline: 'none',
             }}
           />
           <Tooltip title="Profile">
