@@ -17,7 +17,6 @@ const Navbar = () => {
     <AppBar
       position="static"
       sx={{
-        height: '7vh',
         background:
           'linear-gradient(127deg, rgba(105,19,20,1) 5%, rgba(156,29,30,1) 43%, rgba(232,43,44,1) 57%, rgba(194,36,37,1) 95%)',
       }}
@@ -38,7 +37,7 @@ const Navbar = () => {
             // width: '15%',
             padding: '5px 1rem',
             marginRight: '2rem',
-            bgcolor: 'pink',
+            marginTop: '4px',
           }}
         >
           <Link href="#" align="center" ml="20%">
@@ -47,11 +46,11 @@ const Navbar = () => {
         </Box>
         <Box
           sx={{
-            flex: 3,
+            flex: 4,
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
-            padding: '0 10px',
+            padding: '0',
           }}
         >
           <NavButton text="Home" divider={true} />
@@ -77,12 +76,16 @@ const Navbar = () => {
             placeholder="Search something cool..."
             fullWidth
             sx={{
-              height: '55%',
-              borderRadius: '1rem',
-              paddingLeft: '20px',
-              paddingRight: '10px',
+              padding: '5px 10px 5px 20px',
               backgroundColor: '#fff',
-              color: '#000',
+              color: 'secondary.main',
+              border: '1px solid #555',
+              borderRadius: '5px',
+              fontSize: '1em',
+
+              // ':hover': {
+              //   bgcolor: 'secondary.main',
+              // },
             }}
           />
           <Tooltip title="Profile">
@@ -91,7 +94,7 @@ const Navbar = () => {
                 variant="rounded"
                 sx={{
                   padding: 0,
-                  background: 'primary.dark', //????
+                  bgcolor: 'secondary.main',
                 }}
               >
                 P

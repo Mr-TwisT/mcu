@@ -1,6 +1,7 @@
-import { Box, Button, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 
 import bgc_image from '../assets/images/bgc_deadpool.png';
+import MainButton from '../components/MainButton';
 import Navbar from '../sections/Navbar';
 
 const LandingPage = () => {
@@ -78,30 +79,8 @@ const LandingPage = () => {
               MCU!
             </Typography>
             <Stack direction="row" spacing={2}>
-              <Button
-                variant="contained"
-                onClick={() => {
-                  console.log('click');
-                }}
-                sx={{
-                  fontSize: '1rem',
-                  color: 'primary.contrastText',
-                }}
-              >
-                Sign up
-              </Button>
-              <Button
-                variant="contained"
-                onClick={() => {
-                  console.log('click');
-                }}
-                sx={{
-                  fontSize: '1rem',
-                  color: 'primary.contrastText',
-                }}
-              >
-                Log in
-              </Button>
+              <MainButton text={'Sign up'} click={() => console.log('click')} />
+              <MainButton text="Log in" click={() => console.log('click')} />
             </Stack>
           </Box>
         </Box>

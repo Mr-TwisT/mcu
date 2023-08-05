@@ -5,13 +5,13 @@ const NavButton = ({ text, divider = false }) => (
   <>
     <Button
       variant="text"
+      fullWidth
       onClick={() => {
         console.log('click');
       }}
       sx={{
         fontSize: '1rem',
-        margin: 'auto 0',
-        // padding: '0 8px',
+        margin: 'auto 0 auto 6px',
         color: 'primary.contrastText',
 
         ':hover': {
@@ -26,7 +26,7 @@ const NavButton = ({ text, divider = false }) => (
         orientation="vertical"
         variant="middle"
         flexItem
-        sx={{ borderColor: 'primary.contrastText' }}
+        sx={{ borderColor: 'primary.contrastText', padding: '3px' }}
       />
     ) : null}
   </>

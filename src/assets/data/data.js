@@ -1,7 +1,7 @@
 // 20230501130117
 // https://mcuapi.herokuapp.com/api/v1/movies
 
-data = [
+export const data = [
   {
     id: 1,
     title: 'Iron Man',
