@@ -1,23 +1,16 @@
 import { Box, Stack, Typography } from '@mui/material';
 
-import bgc_image from '../assets/images/bgc_deadpool.png';
+import '../styles/LandingPage.css';
+
 import MainButton from '../components/MainButton';
 
 const LandingPage = () => {
   return (
     <Stack>
-      <Stack
-        sx={{
-          height: '100vh',
-          backgroundImage: `url("${bgc_image}")`,
-          backgroundColor: '#000',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-        }}
-      >
+      <Stack className="landingPageContainer">
         <Box
           p={4}
+          className="landingPageBox"
           sx={{
             maxWidth: '50%',
             display: 'flex',

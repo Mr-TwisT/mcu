@@ -10,7 +10,7 @@ const App = () => (
   <>
     <ThemeProvider theme={marvelTheme}>
       <Navbar />
-      <HeroesPage />
+      <LandingPage />
     </ThemeProvider>
   </>
 );
