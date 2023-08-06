@@ -2,12 +2,10 @@ import { Box, Stack, Typography } from '@mui/material';
 
 import bgc_image from '../assets/images/bgc_deadpool.png';
 import MainButton from '../components/MainButton';
-import Navbar from '../sections/Navbar';
 
 const LandingPage = () => {
   return (
     <Stack>
-      <Navbar />
       <Stack
         sx={{
           height: '100vh',
