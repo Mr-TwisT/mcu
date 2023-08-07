@@ -1,7 +1,7 @@
 // 20230501130117
 // https://mcuapi.herokuapp.com/api/v1/movies
 
-export const data = [
+const data = [
   {
     id: 1,
     title: 'Iron Man',
@@ -739,3 +739,5 @@ export const data = [
     imdb_id: 'tt10676048',
   },
 ];
+
+export default data;

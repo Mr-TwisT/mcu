@@ -1,16 +1,16 @@
 import { Box, Stack } from '@mui/material';
 import { useSelector } from 'react-redux';
 
-const HeroesPage = () => {
-  const { someItems } = useSelector((store) => store.card);
+const MoviesPage = () => {
+  const { cardItems } = useSelector((store) => store.card);
 
   return (
     <Stack>
       <Box>
-        <p>{someItems[0].bio}</p>
+        <p>{cardItems[0].title}</p>
       </Box>
     </Stack>
   );
 };
 
-export default HeroesPage;
+export default MoviesPage;
