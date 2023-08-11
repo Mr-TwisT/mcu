@@ -5,12 +5,13 @@ import Navbar from './sections/Navbar';
 
 import LandingPage from './pages/LandingPage';
 import HeroesPage from './pages/HeroesPage';
+import MoviesPage from './pages/MoviesPage';
 
 const App = () => (
   <>
     <ThemeProvider theme={marvelTheme}>
       <Navbar />
-      <LandingPage />
+      <MoviesPage />
     </ThemeProvider>
   </>
 );
