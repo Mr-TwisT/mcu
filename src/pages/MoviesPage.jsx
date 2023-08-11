@@ -23,6 +23,7 @@ const MoviesPage = () => {
           directedBy={cardItems[0].directed_by}
           phase={cardItems[0].phase}
           image={cardItems[0].cover_url}
+          postCredit={cardItems[0].post_credit_scenes}
         />
       </Box>
     </Stack>
