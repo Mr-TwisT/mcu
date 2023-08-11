@@ -30,7 +30,7 @@ const MovieCard = ({
           borderRadius="30px"
         >
           <Box className="title" margin="0 auto">
-            <Typography variant="h4" m={0} width="max-content">
+            <Typography variant="h4" m={0} textAlign="center">
               {title}
             </Typography>
           </Box>
@@ -53,8 +53,8 @@ const MovieCard = ({
                 flex: 1,
                 display: 'flex',
                 flexDirection: 'column',
-                //justifyContent: 'center',
-                paddingTop: '10px',
+                justifyContent: 'center',
+                // paddingTop: '10px',
                 paddingLeft: '12px',
                 gap: '1rem',
               }}
