@@ -11,20 +11,26 @@ const MoviesPage = () => {
       <Box
         sx={{
           width: '100%',
-          height: '100vh',
-          overflow: 'hidden',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(4, 1fr)',
+          justifyItems: 'center',
+          gap: '1.5rem',
+          padding: '2.5rem 1rem',
           backgroundImage: 'linear-gradient(to top right, #a31b1f, #7442C8)',
         }}
       >
-        <MovieCard
-          title={cardItems[0].title}
-          releaseDate={cardItems[0].release_date}
-          duration={cardItems[0].duration}
-          directedBy={cardItems[0].directed_by}
-          phase={cardItems[0].phase}
-          image={cardItems[0].cover_url}
-          postCredit={cardItems[0].post_credit_scenes}
-        />
+        {cardItems.map((card) => (
+          <MovieCard
+            key={card.id}
+            title={card.title}
+            releaseDate={card.release_date}
+            duration={card.duration}
+            directedBy={card.directed_by}
+            phase={card.phase}
+            image={card.cover_url}
+            postCredit={card.post_credit_scenes}
+          />
+        ))}
       </Box>
     </Stack>
   );

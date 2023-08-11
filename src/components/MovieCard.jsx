@@ -15,13 +15,9 @@ const MovieCard = ({
   return (
     <Card
       sx={{
-        width: '24vw',
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
+        width: '22vw',
         borderRadius: '30px',
-        padding: '1rem', //?
+        padding: '0.5rem', //?
         backgroundColor: '#f5f5f566',
         backdropFilter: 'blur(10px)',
       }}
