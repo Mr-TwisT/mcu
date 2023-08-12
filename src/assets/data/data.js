@@ -585,13 +585,13 @@ const data = [
   },
   {
     id: 34,
-    title: 'Captain America: New World Order',
+    title: 'Captain America: Brave New World',
     release_date: '2024-05-03',
     box_office: '0',
     duration: 0,
     overview: null,
     cover_url:
-      'https://res.cloudinary.com/augustomarcelo/image/upload/v1658746479/mcuapi/gallery/Movies/captain_america_new_world_order/posters/1.jpg',
+      'https://cdn.marvel.com/content/1x/captainamericabravenewworld_lob_crd_01.jpg',
     trailer_url: null,
     directed_by: 'Julius Onah',
     phase: 5,
