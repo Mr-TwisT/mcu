@@ -22,7 +22,8 @@ const MovieCard = ({
         backdropFilter: 'blur(10px)',
 
         '&:hover .cardImage img': {
-          transform: 'scale(1.1) rotate(5deg) translate(5px, -10px)',
+          transform: 'scale(1.05) rotate(-2deg) translate(5px, -10px)',
+          cursor: 'pointer',
         },
       }}
     >
@@ -34,9 +35,15 @@ const MovieCard = ({
           borderRadius="30px"
         >
           <Box className="title" margin="0 auto">
-            <Typography variant="h4" m={0} textAlign="center">
-              {title}
-            </Typography>
+            {title.length < 24 ? (
+              <Typography variant="h4" m="1.3rem 0" textAlign="center">
+                {title}
+              </Typography>
+            ) : (
+              <Typography variant="h4" m={0} textAlign="center">
+                {title}
+              </Typography>
+            )}
           </Box>
           <Stack direction="row" spacing={1}>
             <Box
@@ -47,9 +54,24 @@ const MovieCard = ({
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
+
+                '&::after': {
+                  content: '""',
+                  position: 'absolute',
+                  width: '60%',
+                  height: '70px',
+                  borderRadius: '50%',
+                  backgroundColor: '#000',
+                  bottom: '0',
+                  left: '0',
+                  zIndex: '-1',
+                  opacity: '0.4',
+                  filter: 'blur(10px)',
+                  transition: '0.5s',
+                },
               }}
             >
-              <img src={image} alt={`${title} movie`} />
+              <img src={image} alt={`"${title}" movie`} />
             </Box>
             <Box
               className="info"

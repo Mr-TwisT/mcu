@@ -10,7 +10,7 @@ const MoviesPage = () => {
     <Stack
       sx={{
         width: '100%',
-        padding: '1rem',
+        padding: '1rem 2rem',
         backgroundImage: 'linear-gradient(to top right, #a31b1f, #7442C8)',
       }}
     >

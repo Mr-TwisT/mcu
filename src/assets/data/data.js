@@ -289,7 +289,7 @@ const data = [
   },
   {
     id: 16,
-    title: 'Spider-Man: Homecoming',
+    title: 'Spider-Man: Homecoming  ',
     release_date: '2017-07-07',
     box_office: '880166350',
     duration: 133,
@@ -495,7 +495,7 @@ const data = [
   },
   {
     id: 27,
-    title: 'Spider-Man: No Way Home',
+    title: 'Spider-Man: No Way Home ',
     release_date: '2021-12-17',
     box_office: '1910048582',
     duration: 148,
@@ -636,7 +636,7 @@ const data = [
   },
   {
     id: 37,
-    title: 'Untitled Deadpool Movie',
+    title: 'Deadpool 3',
     release_date: '2024-11-08',
     box_office: '0',
     duration: 0,
