@@ -25,6 +25,11 @@ const MovieCard = ({
           transform: 'scale(1.05) rotate(-2deg) translate(5px, -10px)',
           cursor: 'pointer',
         },
+        '&:hover .cardImage::after': {
+          width: '70%',
+          opacity: '0.5',
+          transform: 'scale(1.05) rotate(-2deg)',
+        },
       }}
     >
       <CardContent>
