@@ -20,6 +20,10 @@ const MovieCard = ({
         padding: '0.5rem', //?
         backgroundColor: '#f5f5f566',
         backdropFilter: 'blur(10px)',
+
+        '&:hover .cardImage img': {
+          transform: 'scale(1.1) rotate(5deg) translate(5px, -10px)',
+        },
       }}
     >
       <CardContent>
