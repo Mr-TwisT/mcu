@@ -1,5 +1,13 @@
 /* eslint-disable react/prop-types */
-import { Box, Card, CardContent, Stack, Typography } from '@mui/material';
+import {
+  Box,
+  Card,
+  CardContent,
+  Divider,
+  IconButton,
+  Stack,
+  Typography,
+} from '@mui/material';
 
 import '../styles/MovieCard.css';
 
@@ -17,22 +25,30 @@ const MovieCard = ({
       sx={{
         width: '22vw',
         borderRadius: '30px',
-        padding: '0.5rem', //?
+        padding: '0.5rem',
+        paddingBottom: '0',
         backgroundColor: '#f5f5f566',
         backdropFilter: 'blur(10px)',
 
         '&:hover .cardImage img': {
-          transform: 'scale(1.05) rotate(-2deg) translate(5px, -10px)',
           cursor: 'pointer',
+          transform: 'scale(1.05) rotate(-2deg) translate(5px, -10px)',
         },
+
         '&:hover .cardImage::after': {
           width: '70%',
           opacity: '0.5',
           transform: 'scale(1.05) rotate(-2deg)',
         },
+
+        '&:hover .seeMore': {
+          cursor: 'pointer',
+          opacity: '1',
+          transform: 'translate(0, -15px)',
+        },
       }}
     >
-      <CardContent>
+      <CardContent sx={{ paddingBottom: '0 !important' }}>
         <Stack
           className="basicInfo"
           direction="column"
@@ -59,6 +75,7 @@ const MovieCard = ({
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
+                marginBottom: '1rem',
 
                 '&::after': {
                   content: '""',
@@ -67,7 +84,7 @@ const MovieCard = ({
                   height: '70px',
                   borderRadius: '50%',
                   backgroundColor: '#000',
-                  bottom: '0',
+                  bottom: '15%',
                   left: '0',
                   zIndex: '-1',
                   opacity: '0.4',
@@ -84,8 +101,7 @@ const MovieCard = ({
                 flex: 1,
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'center',
-                // paddingTop: '10px',
+                justifyContent: 'start',
                 paddingLeft: '12px',
                 gap: '1rem',
               }}
@@ -118,6 +134,28 @@ const MovieCard = ({
               </Box>
             </Box>
           </Stack>
+          <Divider variant="middle" />
+          <Box
+            className="seeMore"
+            sx={{
+              width: 'max-content',
+              display: 'flex',
+              justifySelf: 'center',
+              alignSelf: 'center',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+              borderRadius: '50%',
+              backgroundColor: '#ffffff55',
+              transition: '0.5s',
+              transform: 'translate(0, 15px)',
+              opacity: '0',
+            }}
+          >
+            <IconButton aria-label="see more info" size="large">
+              <i className="fa-solid fa-ellipsis"></i>
+            </IconButton>
+          </Box>
         </Stack>
       </CardContent>
     </Card>
