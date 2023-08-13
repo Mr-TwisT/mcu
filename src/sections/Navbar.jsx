@@ -2,13 +2,13 @@ import {
   AppBar,
   Avatar,
   Box,
-  InputBase,
-  Link,
   IconButton,
   TextField,
   Tooltip,
   Stack,
 } from '@mui/material';
+
+import { Link } from 'react-router-dom';
 
 import logo from '../assets/images/logo2.png';
 import NavButton from '../components/NavButton';
@@ -41,8 +41,8 @@ const Navbar = () => {
             marginTop: '4px',
           }}
         >
-          <Link href="#" align="center" ml="20%">
-            <img style={{ width: '60%' }} src={logo} alt="Marvel_logo" />
+          <Link to="/" style={{ marginLeft: '20%' }}>
+            <img style={{ width: '60%' }} src={logo} alt="Marvel-logo" />
           </Link>
         </Box>
         <Box
@@ -54,11 +54,21 @@ const Navbar = () => {
             padding: '0',
           }}
         >
-          <NavButton text="Home" divider={true} />
-          <NavButton text="Heroes" divider={true} />
-          <NavButton text="Movies" divider={true} />
-          <NavButton text="Series" divider={true} />
-          <NavButton text="About us" />
+          <Link to="/">
+            <NavButton text="Home" divider={true} />
+          </Link>
+          <Link to="/heroes">
+            <NavButton text="Heroes" divider={true} />
+          </Link>
+          <Link to="/movies">
+            <NavButton text="Movies" divider={true} />
+          </Link>
+          <Link to="/series">
+            <NavButton text="Series" divider={true} />
+          </Link>
+          <Link to="/about">
+            <NavButton text="About us" />
+          </Link>
         </Box>
         <Box
           component="form"
