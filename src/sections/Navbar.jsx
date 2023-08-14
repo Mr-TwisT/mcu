@@ -50,25 +50,15 @@ const Navbar = () => {
             flex: 4,
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'space-between',
+            justifyContent: 'center',
             padding: '0',
           }}
         >
-          <Link to="/">
-            <NavButton text="Home" divider={true} />
-          </Link>
-          <Link to="/heroes">
-            <NavButton text="Heroes" divider={true} />
-          </Link>
-          <Link to="/movies">
-            <NavButton text="Movies" divider={true} />
-          </Link>
-          <Link to="/series">
-            <NavButton text="Series" divider={true} />
-          </Link>
-          <Link to="/about">
-            <NavButton text="About us" />
-          </Link>
+          <NavButton text="Home" link="/" divider={true} />
+          <NavButton text="Heroes" link="/heroes" divider={true} />
+          <NavButton text="Movies" link="/movies" divider={true} />
+          <NavButton text="Series" link="/series" divider={true} />
+          <NavButton text="About us" link="/about" />
         </Box>
         <Box
           component="form"

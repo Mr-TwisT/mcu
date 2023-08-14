@@ -1,35 +1,40 @@
-import { Button, Divider } from '@mui/material';
+/* eslint-disable react/prop-types */
+import { Box, Button, Divider, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
-// eslint-disable-next-line react/prop-types
-const NavButton = ({ text, divider = false }) => (
-  <>
-    <Button
-      variant="text"
-      fullWidth
-      onClick={() => {
-        console.log('click');
-      }}
-      sx={{
-        fontSize: '1rem',
-        margin: 'auto 0 auto 6px',
-        color: 'primary.contrastText',
+const NavButton = ({ text, link, divider = false }) => (
+  <Box sx={{ display: 'flex' }}>
+    <Link to={link} style={{ textDecoration: 'none' }}>
+      <Button
+        variant="text"
+        fullWidth
+        sx={{
+          margin: 'auto 0',
+          color: 'primary.contrastText',
 
-        ':hover': {
-          bgcolor: 'secondary.main',
-        },
-      }}
-    >
-      {text}
-    </Button>
+          ':hover': {
+            bgcolor: 'secondary.main',
+          },
+        }}
+      >
+        <Typography variant="h6" padding="0 1rem">
+          {text}
+        </Typography>
+      </Button>
+    </Link>
     {divider ? (
       <Divider
         orientation="vertical"
         variant="middle"
         flexItem
-        sx={{ borderColor: 'primary.contrastText', padding: '3px' }}
+        sx={{
+          borderColor: 'primary.contrastText',
+          padding: '3px',
+          marginRight: '6px',
+        }}
       />
     ) : null}
-  </>
+  </Box>
 );
 
 export default NavButton;
