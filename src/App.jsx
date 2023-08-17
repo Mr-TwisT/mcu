@@ -7,6 +7,7 @@ import Navbar from './sections/Navbar';
 import LandingPage from './pages/LandingPage';
 import HeroesPage from './pages/HeroesPage';
 import MoviesPage from './pages/MoviesPage';
+import ErrorPage from './pages/ErrorPage';
 
 const App = () => (
   <BrowserRouter>
@@ -39,6 +40,7 @@ const App = () => (
             </>
           }
         />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </ThemeProvider>
   </BrowserRouter>
