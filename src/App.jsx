@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@emotion/react';
 import marvelTheme from './styles/theme';
 
-import Navbar from './sections/Navbar';
+import SharedLayout from './layout/SharedLayout';
 
 import LandingPage from './pages/LandingPage';
 import HeroesPage from './pages/HeroesPage';
@@ -13,34 +13,12 @@ const App = () => (
   <BrowserRouter>
     <ThemeProvider theme={marvelTheme}>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Navbar />
-              <LandingPage />
-            </>
-          }
-        />
-        <Route
-          path="heroes"
-          element={
-            <>
-              <Navbar />
-              <HeroesPage />
-            </>
-          }
-        />
-        <Route
-          path="movies"
-          element={
-            <>
-              <Navbar />
-              <MoviesPage />
-            </>
-          }
-        />
-        <Route path="*" element={<ErrorPage />} />
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<LandingPage />} />
+          <Route path="heroes" element={<HeroesPage />} />
+          <Route path="movies" element={<MoviesPage />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Route>
       </Routes>
     </ThemeProvider>
   </BrowserRouter>
