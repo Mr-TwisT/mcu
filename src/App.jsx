@@ -17,8 +17,8 @@ const App = () => (
           <Route index element={<LandingPage />} />
           <Route path="heroes" element={<HeroesPage />} />
           <Route path="movies" element={<MoviesPage />} />
-          <Route path="*" element={<ErrorPage />} />
         </Route>
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </ThemeProvider>
   </BrowserRouter>

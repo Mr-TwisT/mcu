@@ -35,14 +35,15 @@ const Navbar = () => {
         <Box
           sx={{
             flex: 1.25,
-            // width: '15%',
-            padding: '5px 1rem',
-            marginRight: '2rem',
-            marginTop: '4px',
+            padding: '0.3rem 0',
+            margin: '0.2rem 2rem 0.1rem 0',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <Link to="/" style={{ marginLeft: '20%' }}>
-            <img style={{ width: '60%' }} src={logo} alt="Marvel-logo" />
+            <img src={logo} alt="Marvel-logo" />
           </Link>
         </Box>
         <Box
