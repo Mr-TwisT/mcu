@@ -11,7 +11,9 @@ const ErrorPage = () => {
         display: 'flex',
         flexDirection: 'column',
         padding: '1rem 3rem',
-        backgroundColor: '#5D04D9',
+        // backgroundColor: '#5D04D9',
+        background:
+          'linear-gradient(300deg, rgba(93,4,217,1) 5%, rgba(72,5,166,1) 40%, rgba(52,7,115,1) 60%, rgba(40,5,89,1) 95%)',
         color: '#fff',
       }}
     >
