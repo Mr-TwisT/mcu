@@ -19,7 +19,7 @@ const HeroesPage = () => {
         <HeroSmallCard
           name={cardItems[34].title}
           image={cardItems[34].cover_url}
-          desc={cardItems[34].overview}
+          desc={cardItems[3].overview}
         />
       </Box>
     </Stack>
