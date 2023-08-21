@@ -1,0 +1,19 @@
+.swiper-button-prev {
+  top: 40%;
+  left: -40px;
+  background-image: url('../assets/images/arrow-left.svg');
+  background-color: '#000';
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.swiper-button-next {
+  top: 40%;
+  right: -40px;
+  background-image: url('../assets/images/arrow-right.svg');
+  background-color: '#000';
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
