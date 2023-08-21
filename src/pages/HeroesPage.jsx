@@ -38,8 +38,7 @@ const HeroesPage = () => {
               spaceBetween={45}
               loop={true}
               centeredSlides={true}
-              fadeEffect={true} //?
-              grabCursor={true}
+              grabCursor={false}
               pagination={{
                 clickable: true,
                 dynamicBullets: true,
@@ -47,7 +46,20 @@ const HeroesPage = () => {
               navigation={true}
               modules={[Pagination, Navigation]}
               className="mySwiper"
-              style={{ padding: '0 0 4rem 0', overflow: 'visible' }}
+              style={{ paddingBottom: '4rem', overflow: 'visible' }}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                650: {
+                  slidesPerView: 2,
+                  centeredSlides: false,
+                },
+                1100: {
+                  slidesPerView: 3,
+                  centeredSlides: true,
+                },
+              }}
             >
               <SwiperSlide>
                 <HeroSmallCard

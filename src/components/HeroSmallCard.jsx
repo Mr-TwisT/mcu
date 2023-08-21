@@ -30,7 +30,7 @@ const HeroSmallCard = ({ name, image, desc }) => {
             top: '0',
             height: '100%',
             width: '100%',
-            backgroundColor: '#4070f4',
+            backgroundColor: '#7442C8',
             borderRadius: '25px 25px 0 25px',
 
             '::before, ::after': {
@@ -38,9 +38,9 @@ const HeroSmallCard = ({ name, image, desc }) => {
               position: 'absolute',
               right: '0',
               bottom: '-40px',
-              height: '40px',
               width: '40px',
-              backgroundColor: '#4070f4',
+              height: '40px',
+              backgroundColor: '#7442C8',
             },
 
             '::after': {
@@ -69,7 +69,7 @@ const HeroSmallCard = ({ name, image, desc }) => {
               width: '100%',
               objectFit: 'cover',
               borderRadius: '50%',
-              border: '4px solid #4070f4',
+              border: '4px solid #7442C8',
             }}
           />
         </Box>
@@ -102,7 +102,7 @@ const HeroSmallCard = ({ name, image, desc }) => {
         <MainButton
           text="More"
           link="/"
-          style={{ margin: '2rem 0 0.5rem 0' }}
+          style={{ margin: '2rem 0 0.5rem 0', backgroundColor: '#7442C8' }}
         />
       </Box>
     </Box>
