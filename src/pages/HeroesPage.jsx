@@ -6,7 +6,6 @@ import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import 'swiper/swiper-bundle.css';
 
 import '../styles/HeroesPage.css';
 
@@ -16,7 +15,7 @@ const HeroesPage = () => {
   const { cardItems } = useSelector((store) => store.card);
 
   return (
-    <Stack sx={{ height: '100vh', padding: '1rem' }}>
+    <Stack sx={{ height: '100vh', padding: '1rem', backgroundColor: '#aaa' }}>
       <Box
         sx={{
           height: '100%',
@@ -27,17 +26,16 @@ const HeroesPage = () => {
       >
         <Box
           sx={{
-            background: 'grey',
             maxWidth: '1320px',
             width: '100%',
-            padding: '2.5rem 3rem',
+            padding: '2rem 2.75rem',
             overflow: 'hidden',
           }}
         >
           <Box sx={{ borderRadius: '25px' }}>
             <Swiper
               slidesPerView={3}
-              spaceBetween={25}
+              spaceBetween={45}
               loop={true}
               centeredSlides={true}
               fadeEffect={true} //?
