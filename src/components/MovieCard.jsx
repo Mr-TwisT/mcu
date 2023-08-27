@@ -12,7 +12,7 @@ import {
 import '../styles/MovieCard.css';
 
 import { useDispatch } from 'react-redux';
-import { showMore } from '../data/features/movie/movieSlice';
+import { openModal } from '../data/features/movie/movieSlice';
 
 const MovieCard = ({
   id,
@@ -161,7 +161,7 @@ const MovieCard = ({
             <IconButton
               aria-label="see more info"
               size="large"
-              onClick={() => dispatch(showMore(id))}
+              onClick={() => dispatch(openModal(id))}
             >
               <i className="fa-solid fa-ellipsis"></i>
             </IconButton>
