@@ -2,9 +2,21 @@ import { Backdrop, Box, Fade, Modal, Typography } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { closeModal } from '../data/features/movie/movieSlice';
 
+import MovieCardInfo from './MovieCardInfo';
+
 const ModalCard = () => {
   const { isModalOpen, movieInModal } = useSelector((store) => store.movieCard);
   const dispatch = useDispatch();
+
+  const {
+    title,
+    cover_url,
+    release_date,
+    duration,
+    directed_by,
+    phase,
+    post_credit_scenes,
+  } = movieInModal;
 
   return (
     <>
@@ -40,56 +52,35 @@ const ModalCard = () => {
             <Box sx={{ display: 'flex' }}>
               <Box>
                 <img
-                  src={movieInModal.cover_url}
-                  alt={`"${movieInModal.title}" movie`}
+                  src={cover_url}
+                  alt={`"${title}" movie`}
                   style={{
                     width: '66%',
-                    borderRadius: '40px',
+                    borderRadius: '40px 0 0 40px',
                   }}
                 />
               </Box>
-              <Box
-                className="info"
-                sx={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'start',
-                  paddingLeft: '12px',
-                  gap: '1rem',
-                }}
-              >
-                <Typography variant="h3" textAlign="center">
-                  {movieInModal.title}
+              <Box>
+                <Typography variant="h3" textAlign="center" mt={2} mb={4}>
+                  &quot;{title}&quot;
                 </Typography>
-                <Box className="releaseDate">
-                  <Typography sx={{ fontWeight: 'bold' }}>
-                    Release data:{' '}
-                  </Typography>
-                  <Typography>{movieInModal.release_date}</Typography>
-                </Box>
-                <Box className="duration">
-                  <Typography sx={{ fontWeight: 'bold' }}>
-                    Duration:{' '}
-                  </Typography>
-                  <Typography>{movieInModal.duration} min</Typography>
-                </Box>
-                <Box className="directedBy">
-                  <Typography sx={{ fontWeight: 'bold' }}>
-                    Directed by:{' '}
-                  </Typography>
-                  <Typography>{movieInModal.directed_by}</Typography>
-                </Box>
-                <Box className="phase">
-                  <Typography sx={{ fontWeight: 'bold' }}>
-                    MCU Phase:{' '}
-                  </Typography>
-                  <Typography>{movieInModal.phase}</Typography>
-                </Box>
-                <Box className="postCredit">
-                  <Typography sx={{ fontWeight: 'bold' }}>
-                    Post credit scenes:{' '}
-                  </Typography>
-                  <Typography>{movieInModal.post_credit_scenes}</Typography>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'start',
+                    gap: '1rem',
+                    transform: 'translateX(-55%)',
+                  }}
+                >
+                  <MovieCardInfo header="Release date" text={release_date} />
+                  <MovieCardInfo header="Duration" text={duration} />
+                  <MovieCardInfo header="Directed by" text={directed_by} />
+                  <MovieCardInfo header="MCU Phase" text={phase} />
+                  <MovieCardInfo
+                    header="Post credit scenes"
+                    text={post_credit_scenes}
+                  />
                 </Box>
               </Box>
             </Box>
@@ -101,3 +92,5 @@ const ModalCard = () => {
 };
 
 export default ModalCard;
+
+//zmienić background, dodać więcej info, naprawić pozycjonowanie

@@ -114,7 +114,7 @@ const MovieCard = ({
             >
               <Box className="releaseDate">
                 <Typography sx={{ fontWeight: 'bold' }}>
-                  Release data:{' '}
+                  Release date:{' '}
                 </Typography>
                 <Typography>{releaseDate}</Typography>
               </Box>
