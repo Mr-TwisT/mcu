@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import MovieCard from '../components/MovieCard';
 
 const MoviesPage = () => {
-  const { cardItems } = useSelector((store) => store.card);
+  const { movieCardItems } = useSelector((store) => store.movieCard);
 
   return (
     <Stack
@@ -37,16 +37,16 @@ const MoviesPage = () => {
           paddingBottom: '3rem',
         }}
       >
-        {cardItems.map((card) => (
+        {movieCardItems.map((movie) => (
           <MovieCard
-            key={card.id}
-            title={card.title}
-            releaseDate={card.release_date}
-            duration={card.duration}
-            directedBy={card.directed_by}
-            phase={card.phase}
-            image={card.cover_url}
-            postCredit={card.post_credit_scenes}
+            key={movie.id}
+            title={movie.title}
+            releaseDate={movie.release_date}
+            duration={movie.duration}
+            directedBy={movie.directed_by}
+            phase={movie.phase}
+            image={movie.cover_url}
+            postCredit={movie.post_credit_scenes}
           />
         ))}
       </Box>

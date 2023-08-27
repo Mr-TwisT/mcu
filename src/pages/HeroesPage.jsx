@@ -12,7 +12,7 @@ import '../styles/HeroesPage.css';
 import HeroSmallCard from '../components/HeroSmallCard';
 
 const HeroesPage = () => {
-  const { cardItems } = useSelector((store) => store.card);
+  const { movieCardItems } = useSelector((store) => store.movieCard);
 
   return (
     <Stack sx={{ height: '100vh', padding: '1rem', backgroundColor: '#aaa' }}>
@@ -63,37 +63,37 @@ const HeroesPage = () => {
             >
               <SwiperSlide>
                 <HeroSmallCard
-                  name={cardItems[34].title}
-                  image={cardItems[34].cover_url}
-                  desc={cardItems[3].overview}
+                  name={movieCardItems[34].title}
+                  image={movieCardItems[34].cover_url}
+                  desc={movieCardItems[3].overview}
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <HeroSmallCard
-                  name={cardItems[34].title}
-                  image={cardItems[34].cover_url}
-                  desc={cardItems[3].overview}
+                  name={movieCardItems[34].title}
+                  image={movieCardItems[34].cover_url}
+                  desc={movieCardItems[3].overview}
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <HeroSmallCard
-                  name={cardItems[34].title}
-                  image={cardItems[34].cover_url}
-                  desc={cardItems[3].overview}
+                  name={movieCardItems[34].title}
+                  image={movieCardItems[34].cover_url}
+                  desc={movieCardItems[3].overview}
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <HeroSmallCard
-                  name={cardItems[34].title}
-                  image={cardItems[34].cover_url}
-                  desc={cardItems[3].overview}
+                  name={movieCardItems[34].title}
+                  image={movieCardItems[34].cover_url}
+                  desc={movieCardItems[3].overview}
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <HeroSmallCard
-                  name={cardItems[34].title}
-                  image={cardItems[34].cover_url}
-                  desc={cardItems[3].overview}
+                  name={movieCardItems[34].title}
+                  image={movieCardItems[34].cover_url}
+                  desc={movieCardItems[3].overview}
                 />
               </SwiperSlide>
             </Swiper>

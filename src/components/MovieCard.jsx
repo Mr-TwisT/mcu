@@ -11,6 +11,9 @@ import {
 
 import '../styles/MovieCard.css';
 
+import { useDispatch } from 'react-redux';
+import { showMore } from '../data/features/movie/movieSlice';
+
 const MovieCard = ({
   title,
   releaseDate,
@@ -20,6 +23,8 @@ const MovieCard = ({
   image,
   postCredit,
 }) => {
+  const dispatch = useDispatch();
+
   return (
     <Card
       sx={{
@@ -152,7 +157,11 @@ const MovieCard = ({
               opacity: '0',
             }}
           >
-            <IconButton aria-label="see more info" size="large">
+            <IconButton
+              aria-label="see more info"
+              size="large"
+              onClick={() => dispatch(showMore())}
+            >
               <i className="fa-solid fa-ellipsis"></i>
             </IconButton>
           </Box>
