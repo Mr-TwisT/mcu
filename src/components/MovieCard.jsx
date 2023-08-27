@@ -15,6 +15,7 @@ import { useDispatch } from 'react-redux';
 import { showMore } from '../data/features/movie/movieSlice';
 
 const MovieCard = ({
+  id,
   title,
   releaseDate,
   duration,
@@ -160,7 +161,7 @@ const MovieCard = ({
             <IconButton
               aria-label="see more info"
               size="large"
-              onClick={() => dispatch(showMore())}
+              onClick={() => dispatch(showMore(id))}
             >
               <i className="fa-solid fa-ellipsis"></i>
             </IconButton>

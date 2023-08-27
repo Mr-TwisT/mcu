@@ -11,8 +11,11 @@ const movieSlice = createSlice({
   name: 'movieCard',
   initialState,
   reducers: {
-    showMore: (state) => {
+    showMore: (state, { payload }) => {
       state.isMoreInfoShowed = true;
+      const movieCardItem = state.movieCardItems.find((item) => {
+        item.id === payload;
+      });
     },
   },
 });

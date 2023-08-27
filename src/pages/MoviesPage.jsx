@@ -40,6 +40,7 @@ const MoviesPage = () => {
         {movieCardItems.map((movie) => (
           <MovieCard
             key={movie.id}
+            id={movie.id}
             title={movie.title}
             releaseDate={movie.release_date}
             duration={movie.duration}
